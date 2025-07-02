@@ -215,6 +215,120 @@
   font-size: 0.95em;
   color: #bdbdbd;
 }
+
+/* --- Auth UI --- */
+.auth-container {
+  max-width: 370px;
+  margin: 64px auto 0 auto;
+  padding: 32px 24px;
+  background: var(--bg-secondary);
+  border-radius: 16px;
+  box-shadow: 0 0 12px 0 rgba(34, 34, 78, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.auth-header {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 22px;
+  color: #1976d2;
+  letter-spacing: -1px;
+  text-align: center;
+}
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.auth-input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #e9ecef;
+  font-size: 1rem;
+  margin-bottom: 4px;
+  background: #fff;
+}
+
+.auth-input:focus {
+  border-color: #1976d2;
+  outline: none;
+}
+
+.auth-btn {
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 10px 0;
+  cursor: pointer;
+  margin-top: 8px;
+  margin-bottom: 6px;
+  transition: background 0.2s;
+}
+.auth-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+.auth-btn:hover:not(:disabled) {
+  background: #1560a3;
+}
+
+.auth-error {
+  color: #ff9800;
+  background: #fff3e0;
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin-bottom: 4px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.auth-toggle {
+  font-size: 1rem;
+  color: #282c34;
+  margin-top: 14px;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  align-items: center;
+}
+.auth-link {
+  background: none;
+  border: none;
+  color: #1976d2;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0 2px;
+  font-size: inherit;
+  font-weight: 700;
+  transition: color 0.2s;
+}
+.auth-link:hover {
+  color: #ff9800;
+}
+
+/* responsive for auth container */
+@media (max-width: 590px) {
+  .auth-container {
+    padding: 16px 8px;
+    max-width: 96vw;
+    border-radius: 0;
+    box-shadow: none;
+    margin: 32px 0 0 0;
+  }
+  .auth-header {
+    font-size: 1.07rem;
+    margin-bottom: 11px;
+  }
+  .auth-input {
+    font-size: 0.94rem;
+    padding: 7px;
+  }
+}
 .todo-link {
   color: #1976d2;
   text-decoration: underline;
